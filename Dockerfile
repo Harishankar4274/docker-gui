@@ -9,4 +9,6 @@ RUN apt-get install -y \
         gnupg \
         --no-install-recommends
 
+RUN curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor  | apt-key add -
+
 CMD [ "bash" ]
